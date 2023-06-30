@@ -40,7 +40,10 @@ CREATE TABLE "departments" (
 
 CREATE TABLE "dept_emp" (
     "emp_no" int   NOT NULL,
-    "dept_no" varchar(20)   NOT NULL
+    "dept_no" varchar(20)   NOT NULL,
+    CONSTRAINT "pk_dept_emp" PRIMARY KEY (
+        "emp_no","dept_no"
+     )
 );
 
 CREATE TABLE "dept_manager" (
